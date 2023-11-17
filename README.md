@@ -64,7 +64,31 @@ Ciclos (for)
 4. Describir cómo se declaraban variables y constantes en JavaScript antes de la introducción de ECMAScript 6 (ES6). Explicar cómo ES6 mejoró la declaración de 
    variables y constantes, y mencionar los problemas que esta mejora resuelve en el desarrollo web Frontend.
    Rta:
+   Antes de la introduccion de ECMAScript6 (ES6), la forma de declarar variables y constantes en JavaScript se realizaba utilizando las palabras clave 'var' para variables y 'const' 
+   para constantes.
    
+   ECMAScript 6 (ES6) mejoró la declaración de variables en JavaScript de las siguientes maneras:
+   let para Ámbito de Bloque:
+      Antes de ES6, var tenía ámbito de función. let permite declarar variables con ámbito de bloque, evitando problemas asociados con var.
+   
+   const para Constantes:
+      Antes de ES6, no había una forma clara de definir constantes. ES6 introdujo const, que declara variables que no pueden ser reasignadas después de la inicialización.
 
+   Evita Problemas de Elevación (Hoisting):
+      Con let y const, las variables no se elevan al inicio de su ámbito, evitando comportamientos inesperados asociados con el hoisting de variables declaradas con var.
+      Estas mejoras aumentan la claridad del código, reducen errores potenciales y facilitan la escritura de programas más robustos.
+
+   Ámbito Controlado:
+      let y const ofrecen ámbitos más precisos, evitando problemas de contaminación global.
+   Evita Reasignaciones Indeseadas:
+      const previene cambios no deseados al declarar constantes inmutables.
+   Código Más Predecible:
+      let y const proporcionan claridad en la intención del código, facilitando la comprensión.
+   Protección contra Hoisting:
+      Evita sorpresas causadas por el hoisting al declarar variables con let y const.
+   Fomenta Desarrollo Estructurado:
+      Facilita prácticas de desarrollo más estructuradas y comprensibles.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5. 
 
 

@@ -89,6 +89,52 @@ Ciclos (for)
    Fomenta Desarrollo Estructurado:
       Facilita prácticas de desarrollo más estructuradas y comprensibles.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-5. 
+5. ¿Cómo  se  declaran  las  funciones  en  JavaScript  y  cuál  es  la  diferencia  entre  una 
+   declaración  de  función,  una  expresión  de  función  y  una  función  de  flecha  (arrow 
+   function)? Proporcionar ejemplos de cada una.
+
+   Rta: 
+   En JavaScript, las funciones se declaran usando la palabra clave function. La sintaxis básica para declararla es la siguiente:
+   function nombreFuncion([parametros]) {
+  // código de la función
+}
+nombreFuncion= es el nombre de la función.
+[parametros]= es una lista opcional de parámetros que la función aceptará. Los parámetros se separan por comas.
+// código de la función= es el código que la función ejecutará.
+
+La principal diferencia es la sintaxis entre ellas.
+Ej: Declaraciones de función.
+    function sumar(a, b) {
+  return a + b;
+}
+Ej: Expresiones de función.
+    (a, b) => a + b
+Ej: Funciones de flecha.
+    (param1, param2, ...) => expression
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6. ¿Por qué es necesario el uso de funciones en el desarrollo web Frontend? Enumerar al 
+menos tres razones fundamentales y proporcionar ejemplos de situaciones en las que 
+las funciones son esenciales. Además, mencionar la ventaja de las funciones flecha en 
+el contexto de estas razones.
+
+1. Organización del código:
+   Las funciones permiten organizar el código en bloques lógicos, lo que facilita su comprensión y mantenimiento. Por ejemplo, una función podría utilizarse para cargar un conjunto de 
+   datos, validar un formulario o realizar una operación matemática.
+   Ej:
+      Un desarrollador está creando una aplicación web que permite a los usuarios registrarse. Para organizar el código, podría crear una función que valide los datos del formulario de 
+      registro. Esta función podría llamarse validarFormularioRegistro().
+3. Reutilización de código:
+   Las funciones se pueden reutilizar en diferentes partes de una aplicación web, lo que ahorra tiempo y esfuerzo a los desarrolladores. Por ejemplo, una 
+   función que se utiliza para mostrar un mensaje de error podría utilizarse en varias páginas de una aplicación.
+   Ej:
+      Un desarrollador está creando una aplicación web que utiliza un menú desplegable en varias páginas. Para reutilizar el código, podría crear una función que cree el menú 
+      desplegable. Esta función podría llamarse crearMenuDesplegable().
+5. Mejora de la mantenibilidad del código: Las funciones ayudan a mejorar la mantenibilidad del código al hacer que sea más fácil encontrar y corregir errores.
+   Ej:
+      Un desarrollador está creando una aplicación web que utiliza una función para aplicar un estilo de negrita a un texto. Si el desarrollador necesita cambiar el estilo de negrita, 
+      puede hacerlo fácilmente porque el código relacionado con el estilo está agrupado en la función.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7. ¿Cuál es la diferencia entre parámetro y argumento?
 
 
+   

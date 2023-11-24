@@ -135,6 +135,62 @@ el contexto de estas razones.
       puede hacerlo fácilmente porque el código relacionado con el estilo está agrupado en la función.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 7. ¿Cuál es la diferencia entre parámetro y argumento?
+    Rta:
+    La diferencia es que el parámetro es una variable que se declara en la definición de una función, procedimiento o método, mientras que el argumento es 
+    el valor que se pasa a la función, procedimiento o método cuando se llama.
+    En otras palabras, el parámetro es la variable que recibe el valor del argumento.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8. Definir el concepto de Callback y proporcionar un ejemplo práctico.
+   Rta:
+   Una callback es una función que se pasa como argumento a otra función. La función externa invocará a la función callback cuando se complete la operación para la que fue creada.
+   Las callbacks se utilizan a menudo en programación asincrónica para permitir que una función se ejecute de forma independiente de la función que la llamó.
+   Ej:
+      const boton = document.querySelector("button");
 
-
+      boton.addEventListener("click", function() {
+         console.log("Botón pulsado");
+      });
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+9. ¿Qué  es  el  hoisting  en  JavaScript  y  cómo  afecta  a  las  variables  y  funciones? 
+   Proporcionar ejemplos de hoisting en declaraciones de variables y funciones.
+   Rta:
+   el hoisting es un comportamiento en el que las declaraciones de variables y funciones se mueven al principio del ámbito en el que se encuentran, antes de que se ejecuten otras 
+   líneas de código en el mismo ámbito.
    
+   El hoisting afecta a las variables y funciones de la siguiente manera:
+
+   Variables: Las variables declaradas sin inicialización se inicializan con el valor undefined.
+   Funciones: Las funciones declaradas se mueven al principio del ámbito en el que se encuentran, pero no se ejecutan.
+
+   EJEMPLOS:
+   	function saludar() {
+  console.log("Hola");
+}
+
+saludar();
+console.log("Hola");
+-----------------------------------
+	var x;
+console.log(x); // Error: ReferenceError: x is not defined
+
+x = 1;
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10.  Definir brevemente el concepto de objeto en JavaScript y cuál es la visión general sobre este concepto. Indicar, también cómo se declaran estas estructuras de datos.
+     Rta:
+     un objeto es una colección de datos relacionados y/o funcionalidad (que generalmente consta de algunas variables y funciones, que se denominan propiedades y métodos cuando están 
+     dentro de objetos).
+     es una forma de agrupar datos y funcionalidad relacionados. Los objetos se pueden utilizar para representar cosas del mundo real, como personas, lugares o cosas.
+     se declaran con const o let.
+     const persona = {
+  	nombre: "Juan Pérez",
+  	edad: 30,
+  	sexo: "masculino",
+	  };
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+

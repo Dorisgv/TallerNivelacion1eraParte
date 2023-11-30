@@ -187,6 +187,34 @@ x = 1;
   	sexo: "masculino",
 	  };
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+11. ¿Qué son propiedades?, y ¿Cuál es la diferencia entre una propiedad y un método en un objeto?
+    Rta:
+    Las propiedades son una caracteristica de un objeto. Representa un dato o un valor que está asociado con el objeto. Las propiedades se pueden usar para almacenar datos, como el 
+    nombre, la edad o la altura de una persona.
+    La principal diferencia entre una propiedad y un método es que una propiedad almacena datos, mientras que un método realiza una acción. Las propiedades se pueden usar para 
+    almacenar datos relacionados con un objeto, como el nombre, la edad o la altura de una persona. Los métodos se pueden usar para realizar acciones relacionadas con un objeto, como 
+    caminar, hablar o correr.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 12. Explicar las dos formas de acceder a una propiedad de objetos e indicar las situaciones en que conviene usar una manera sobre la otra.
+     Rta:
+     hay dos formas principales de acceder a las propiedades de un objeto: la notación de punto (dot notation) y la notación de corchetes (bracket notation).
+     
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -198,8 +198,214 @@ x = 1;
  12. Explicar las dos formas de acceder a una propiedad de objetos e indicar las situaciones en que conviene usar una manera sobre la otra.
      Rta:
      hay dos formas principales de acceder a las propiedades de un objeto: la notación de punto (dot notation) y la notación de corchetes (bracket notation).
-     
-     
+     - Notacion de punto:
+       En esta forma, utilizas un punto seguido del nombre de la propiedad para acceder a su valor.
+     - En que caso podemos utilizar cada una.
+       Cuando el nombre de la propiedad es conocido y está compuesto por caracteres válidos para identificadores en el lenguaje (como letras, números y guiones bajos).
+       En situaciones generales donde la claridad y la concisión son importantes.
+     - Notacion de corchetes:
+       En esta forma, utilizas corchetes y el nombre de la propiedad como una cadena para acceder al valor de la propiedad.
+     - En que caso podemos utilizar cada una.
+       Cuando el nombre de la propiedad es dinámico o se determina durante la ejecución del programa.
+       Para acceder a propiedades cuyos nombres contienen espacios, caracteres especiales o son palabras reservadas.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+13. ¿Existe alguna forma de recorrer las propiedades de un objeto? En caso negativo, explicar por qué no es posible y en caso positivo proporcionar un ejemplo. Mencionar
+    una situación en la cual sea muy útil recorrer las propiedades de un objeto.
+    Rta:
+    Sí, es posible recorrer las propiedades de un objeto en muchos lenguajes de programación, incluyendo JavaScript. Una de las formas más comunes de hacer esto es mediante un bucle, 
+    como el bucle for...in. Sin embargo, es importante destacar que no todos los lenguajes de programación admiten esta funcionalidad directamente.
+    EJEMPLO:
+             let persona = {
+              nombre: "Juan",
+              edad: 25,
+              profesion: "Desarrollador"
+            };
+
+            for (let propiedad in persona) {
+            console.log(propiedad + ": " + persona[propiedad]);
+         }
+SITUACION UTIL:
+Recorrer las propiedades de un objeto puede ser muy útil en situaciones en las que necesitas realizar operaciones en todas las propiedades del objeto dinámicamente. Por ejemplo, podrías querer imprimir todas las propiedades y sus valores, realizar cálculos basados en los valores de las propiedades, o copiar ciertas propiedades de un objeto a otro.
+EJEMPLO:
+function imprimirPropiedades(objeto) {
+  for (let propiedad in objeto) {
+    console.log(propiedad + ": " + objeto[propiedad]);
+  }
+}
+
+let persona = {
+  nombre: "Ana",
+  edad: 30,
+  profesion: "Ingeniera"
+};
+
+imprimirPropiedades(persona);
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+14. ¿Por qué son útiles los objetos en la programación web y qué tipos de datos pueden almacenar?
+    Rta:
+    Los objetos son fundamentales en la programacion web ya que permiten organizar y estructurar datos de manera eficiente. En javascript, los objetos son un tipo de estructura de 
+    datos clave, aqui tenemos algunas razones:
+    - Organizacion de datos, flexibilidad, acceso eficiente, encapsulamiento, interaccion con el DOM.
+    Los tipos de datos que almacenan los objetos en javascript son colecciones de pares clave - valor, y las claves (o propiedades) pueden ser cadenas de texto simbolos pueden ser:
+    - Cadenas de texto.
+    - Numeros
+    - Booleanos
+    - Otros objetos
+    - Arreglos
+    - Funciones
+    - Null y Undefined
+    - Expresiones regulares.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+15. ¿Qué es un array en JavaScript y por qué son esenciales?
+    Rta:
+    Es un tipo de estructura que permite almacenar y organizar datos de manera secuencial. es una coleccion ordenada de elementos , donde cada elementopuede ser de cualquier tipo de 
+    datos, incluyendo numeros, cadena de texto, objetos, funciones y otros arrays.
+    Aqui, tenemos algunas razones por las cuales son esenciales en javascript:
+    - Almacenamiento de datos estructurados
+    - Iteraccion y acceso eficiente
+    - Manejo de conjuntos de datos dinamicos
+    - Operaciones de transformacion y manipulacion sencillas
+    - Estructuras de datos comunes
+    - Interaccion con API's y datos externos.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+16. ¿Cómo acceder a un elemento dentro de un array? Explicar con un ejemplo.
+    Rta:
+    Para acceder, puedes usar la notacion de corchetes '[]' con el indice del elemento que deseas obtener. Recuerda que los indices en javascript comienzan desde cero.
+    EJEMPLO:
+    
+    // Definir un array de números
+       let numeros = [10, 20, 30, 40, 50];
+
+    // Acceder al primer elemento (índice 0)
+       let primerElemento = numeros[0];
+       console.log("Primer elemento:", primerElemento);
+
+    // Acceder al tercer elemento (índice 2)
+       let tercerElemento = numeros[2];
+       console.log("Tercer elemento:", tercerElemento);
+
+    // Acceder al último elemento (longitud - 1)
+       let ultimoElemento = numeros[numeros.length - 1];
+       console.log("Último elemento:", ultimoElemento);
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+17. Mencionar al menos tres funciones de arrays y describir su utilidad en la programación
+    web.
+    Rta:
+    1. map():
+       La función 'map' crea un nuevo array con los resultados de llamar a una funcion proporcionada en cada elemento del array original. Es util para transformar o mapear cada 
+       elemento del array de una forma especifica.
+    2. filter():
+       La función filter crea un nuevo array con todos los elementos que pasan la prueba implementada por la función proporcionada. Es útil para filtrar elementos que cumplen ciertos 
+       criterios.
+    3. reduce():
+       La función reduce aplica una función acumuladora a cada elemento de un array, de izquierda a derecha, para reducirlo a un único valor. Es útil para realizar operaciones de 
+       agregación o resumen en los elementos del array.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+18. Proporcionar un ejemplo de cómo se utiliza una función de array para transformar y filtrar datos en un array.
+    Rta:
+    Supongamos que tenemos un array de objetos que representan productos y deseamos realizar dos operaciones:
+    	1. TRANSFORMAR:
+           Duplicar el precio de cada producto.
+    	2. FILTRAR:
+           Obtener solo los productos que tienen un precio mayor o igual a $50.
+EJEMPLO:
+    
+// Array de productos
+let productos = [
+  { nombre: "Laptop", precio: 800 },
+  { nombre: "Teléfono", precio: 300 },
+  { nombre: "Tablet", precio: 150 },
+  { nombre: "Smartwatch", precio: 80 },
+  { nombre: "Cámara", precio: 200 },
+];
+
+// Transformar: Duplicar el precio de cada producto usando map
+let preciosDuplicados = productos.map(function(producto) {
+  return { ...producto, precio: producto.precio * 2 };
+});
+
+console.log("Productos con precios duplicados:", preciosDuplicados);
+
+// Filtrar: Obtener solo productos con precio mayor o igual a $50 usando filter
+let productosFiltrados = productos.filter(function(producto) {
+  return producto.precio >= 50;
+});
+
+console.log("Productos con precio mayor o igual a $50:", productosFiltrados);
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PREGUNTAS PRACTICASSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+...MODULO SOBRE HTML, CSS Y RESPONSIVE DESIGN...
+Preguntas teóricas.
+
+1. ¿Qué significa HTML y cuál es su función en el desarrollo web?
+   Rta:
+   Significa "Hipertext Markup Language" (Lenguaje de Marcado de Hipertexto). Es un estandar que se utiliza para la creacion y el diseño de paginas web.
+   Su funcion principalmente en el desarrollo web es definir y estructurar el contenido de una pagina web. Aqui tenemos algunos puntos clave sobre la funcion de HTML:
+   - Estructuracion del contenido, Definicion semantica,Enlaces y navegacion, Inclusion de multimedia, Formularios y recoleccion de datos, compatibilidad y accesibilidad.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. ¿Cuál es la estructura básica de un documento HTML? Describir las etiquetas esenciales.
+   Rta:
+   La estructura de un documento HTML sigue un formato estandar que incluye ciertas etiquetas esenciales:
+   Aqui un ejemplo de un formato HTML:
+   <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de la Página</title>
+</head>
+<body>
+    <!-- Contenido de la página va aquí -->
+</body>
+</html>
+
+Algunas etiquetas esenciales son las siguientes:
+
+<!DOCTYPE html>:
+Esta declaración define la versión de HTML que estás utilizando. En este caso, html indica que estás utilizando HTML5.
+
+<html>:
+La etiqueta raíz que envuelve todo el contenido del documento HTML. El atributo lang se utiliza para especificar el idioma de la página, lo que puede ser útil para accesibilidad y motores de búsqueda.
+
+<head>:
+Contiene meta información sobre el documento, como la codificación de caracteres, la declaración del viewport (para diseño responsivo), y el título de la página.
+
+<meta charset="UTF-8">:
+Especifica la codificación de caracteres del documento. UTF-8 es una codificación ampliamente utilizada que es capaz de representar una amplia gama de caracteres.
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">:
+Esta etiqueta es crucial para el diseño responsivo. Define cómo el contenido debe ser renderizado en dispositivos con diferentes anchos de pantalla (width=device-width) y establece la escala inicial (initial-scale).
+
+<title>:
+Define el título de la página, que se muestra en la barra de título del navegador o en las pestañas de la página. También es importante para el SEO (Optimización de Motores de Búsqueda).
+	
+<body>:
+Contiene todo el contenido visible de la página web, como texto, imágenes, enlaces, formularios, etc.
+	
+Comentarios HTML:
+Los comentarios en HTML se escriben entre <!-- y -->. Son útiles para agregar notas en el código que no afectan la visualización del contenido y son especialmente útiles para documentar o desactivar temporalmente partes del código.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. ¿Qué es CSS y cuál es su propósito en el desarrollo web?
+   Rta:
+   CSS, significa "Cascading Style Sheets" (Hojas de estilos en cascada) es un lenguaje de diseño utilizado para describir el aspecto y el formato de un documento HTML. CSS permite 
+   preparar la presentacion (estilos) del contenido(estructura y semantica) en el desarrollo web.
+   - Su proposito principal es controlar el diseño visual y la apariencia en las paginas web.
+   Algunas principales propositos y funciones de css y en el desarrollo web son:
+   - Estilo visual, Diseño responsivo, Consistencia y mantenimiento, Accesibilidad, Facilita la implantacion de diseños, Impresion y medios, Animaciones y transiciones.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. ¿Qué son selectores CSS, cuáles son los principales tipos de selectores y porqué es importante entender la especificidad en el contexto de las hojas de estilo en cascada(CSS)? 
+   Describir al menos tres tipos de selectores CSS y cómo la especificidad afecta a la aplicación de estilos en un proyecto de desarrollo web Frontend. Proporcionar
+   ejemplos de situaciones en las que se utiliza la especificidad de selectores para resolver conflictos de estilos.
+   Rta:
+   
+
+
+    
+
 
 
 
